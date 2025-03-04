@@ -54,9 +54,9 @@ def rolling_ols(data, window, sector, info):
 data = pd.read_csv(r'C:\Users\bryan\OneDrive\桌面\python\ff.csv')
 data['date'] = pd.to_datetime(data['date'])
 sectors = data['Sector'].unique()
-# rolling_results = rolling_ols(data, 36, 'Information Technology','T-ratio')
-# for s in sectors:
-#     rolling_ols(data, 36, s, 'T-ratio')
+rolling_results = rolling_ols(data, 36, 'Information Technology','T-ratio')
+for s in sectors:
+    rolling_ols(data, 36, s, 'T-ratio')
 
 
 
